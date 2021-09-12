@@ -1,18 +1,19 @@
 ---
-title: "Data Science, R y Github <i class='far fa-chart-bar' style='font-size:52px'></i><i class='far fa line-chart' style='font-size:52px'></i>"
+title: "Costo Directos e Indirectos de la Corrupción  <i class='far fa-badge' style='font-size:52px'></i><i class='far fa line-chart' style='font-size:52px'></i>"
 subtitle: "Taller Manos a la Data<hr>"
 type: "contributed"
-author: "<br> Arturo Chian <br> <i class='fab fa-twitter' style='color:#6CADDE'></i> <i class='fab fa-github'></i> <i class='fab fa-facebook'></i> @besteamperu"
+author: "<br> Jhon Figueroa <br> <i class='fab fa-twitter' style='color:#6CADDE'></i> <i class='fab fa-github'></i> <i class='fab fa-facebook'></i> @besteamperu"
 date: "Una presentación BEST - Manos a la Data [https://manosaladata.netlify.app/](https://manosaladata.netlify.app/)"
-output:
+output: 
   xaringan::moon_reader:
-    css: ["default", "libs/remark.css"]
+    css: ["shinobi"]
     lib_dir: libs
     nature:
       ratio: 16:9
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+
 ---
 class: inverse middle center
 
@@ -123,629 +124,53 @@ class: inverse middle center
 
 
 ---
-
-## Agenda del día de hoy (0-10)
-
-.can-edit.agenda[
-* Motivarnos: Sin motivación, no aprenderemos! + web
-* Qué es Manos a la data
-* Qué es Data Science.
-* Qué es R y RStudio. 
-* Qué es Markdown y Rmarkdown.
-* Qué es Git y Github.
-* Trabajar con nuestra primera base de datos de Manos a la Data!
-]
-
-
-
----
-class: inverse middle center
-
-## ¡Bienvenidos a Manos a la data!
-
-.animated.bounce[
-<img src="img/owl1.png" height=450px>
-]
-
----
-
-## ¿Qué es manos a la data?
-
-* Un proyecto opensource liderado por BEST!
-* Se busca impulsar la Ciencia de Datos en Perú y lationamérica para todas las carreras!
-* Se busca ayudar en la enseñanza de DS con ejemplos concretos por semana de nuestra realidad con diversas temáticas y tipos de bases de datos (PDF, excels, txt, csv, mapas, etc).
-* Se busca crear un ecosistema opensource de proyectos de Data Science en Perú y Latinoamérica.
-* Siéntase libres de compartir las Bases de Datos semanales para practicar o enseñar.
-* ¡Recuerden que también es importante ofrecer créditos!
-
----
-
-## ¿Qué queremos de ti?
-
-* Difundan la ciencia de datos en Perú y latinoamérica, no existen barreras!
-* Queremos que crezcan!
-* Aprender + aportar = crecer
-* Compartan 1 base de datos pública de tu interés en nuestro Github!
-
-
-
----
 class: inverse middle center
 
 ## Motivación
 
 .animated.bounce[
-<img src="img/r_first_then.png" height=450px>
+<img src="img/ca.jpg" height=550px>
 ]
 
 ---
 
-## ¿Por qué R? ¿Qué puede hacer R? (10-20)
+## Corrupción en el Perú  
 
-* Es la lingua franca de estadística.
-* Una comunidad científica muy activa.
-* Esta diapositiva está en R.
-* Varios libros están escritos con R.
-* Este curso y su web está en R.
-* Se pueden crear blogs en R.
-* Se pueden crear productos en R. (Se explicará más adelante!)
+* La corrupción es "el abuso de poder público para obtener beneficio
+particular"
+* Hay dos categorías muy diferentes de corrupción administrativa: la primera acontece cuando por los actos corruptos se cometen "de acuerdo con las reglas" y la segunda cuando las operaciones se desarrollan
+* La corrupción es, hasta la actualidad, uno de los problemas más preocupantes para la población peruana y afecta directamente la legitimidad de las instituciones públicas
+* De acuerdo al Barómetro de las Américas de Latin American Public Opinion Project, Perú fue el país más preocupado por el tema de la corrupción a nivel regional, un 36% de la población lo señala como el principal problema, por encima de otros temas como la economía, la seguridad, la inestabilidad política y otros. Ese mismo resultado se registró, según el Instituto Nacional de Estadística e Informática (2020)
+
+
+
+![](img/cero.gif)
 
 
 ---
 
-## Creación de libros abiertos 
+## Sobre la data
 
 .center[
-![](img/DS3.png)
-]
-
-.footnote[[Fuente: Forecasting: Principles and Practice](https://otexts.org/fpp2/)]
-
-
----
-
-## Nuevas formas de hacer tesis 
-
-.center[
-![](img/DS4.png)
-]
-
-.footnote[[Fuente: ThesisDown](https://github.com/ismayc/thesisdown)]
-
-
----
-
-## Promueve la investigación reproducible 
-
-.center[
-![](img/DS5.png)
-]
-
-.footnote[[Fuente: ThesisDown](https://github.com/ismayc/thesisdown)]
-
-
----
-
-## Gráficos Dinámicos 
-
-.center[
-![](img/DS6.png)
-]
-
-.footnote[[Fuente: Mages Blog](https://magesblog.com/post/2016-04-26-new-r-package-to-access-world-bank-data/)]
-
-
----
-
-## Desarrollo de aplicaciones fácil de realizar 
-
-.center[
-![](img/DS7.png)
-]
-
-.footnote[[Fuente: Pasa Segura Medellin](https://idinnov.shinyapps.io/pasa-segura-medellin/ 
-)]
-
----
-
-## Aplicable a todas las ciencias
-
-.center[
-![](img/bio1.png)
-]
-
-.footnote[[Fuente: paquete phyloseq Github](https://github.com/joey711/phyloseq 
-)]
-
----
-
-## Y otras más potentes... El límite es tu imaginación 
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
-
-<br>
-
-.center[
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/thVsV_3avJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-]
-
-.footnote[[Fuente: Analytic Health](https://welcome.analytichealth.co.uk/ 
-)]
-
----
-
-## ¿Qué es Ciencia de Datos? (20-30)
-
->For a long time I have thought I was a statistician, interested in inferences from the particular to the general. But as I have watched mathematical statistics evolve, I have had cause to wonder and to doubt. …All in all I have come to feel that my central interest is in data analysis, which I take to include, among other things: procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data.
-
-> **Tukey (1962). The future of Data Analysis, The Annals of Mathematical Statistics**
-
-
----
-
-## ¿Qué es Ciencia de Datos? (20-30)
-
->Hace 50 años, John Tukey llamó a una reforma académica en estadística, a través de uno de los más importantes papers de esa época, llamado “The Future of Data Analysis”, donde señalaba la necesidad futura de una ciencia cuyo interés sea aprender de la data o análisis de datos. Hace unos 20 a 10 años, John Chamber, Jeff Wu, Bill Cleveland y Leo Breiman, dieron una serie de argumentos, de forma independiente sobre expandir los límites de la estadística teórica: Chambers enfatizaba la importancia de la preparación de datos, más que el modelaje estadístico; Breiman, prefería enfatizar la predicción antes que la inferencia; y Cleveland y Wu sugerían llamar a este nuevo campo Data Science por su estrecha relación a la data.
-
-> **Arturo Chian (2018). A propósito de los 25 años de R y 50 años de Data Science (Parte 1), Blog de Behavioral Economics & Data Science Team**
-
----
-
-## Definiendo Data Science 
-
-.pull-left[
-### Diagrama de Venn - Drew Conway
-.center[
-<img src="img/Data_Science_VD.png" height=380px>
-]
-]
-.pull-right[
-1. **Hacking Skills:** Capacidad de resolver problemas programando.
-2. **Math & Statistics knowledge:** Aplicar de forma correcta estadística.
-3. **Conocimiento de experto:** Comprender la data en su campo de investigación (economía, biología, psicología, derecho, etc).
-
-]
-
-.footnote[[Fuente: Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)]
-
-
-
----
-
-## ¿Qué hace un Data Scientist en el día a día? 
-
-.center[
-![](img/time.png)
-]
-
-.footnote[[Fuente: IIO-World](https://iiot-world.com/analytics/how-edge-analytics-can-save-time-of-your-data-scientists/)]
-
-
-
----
-
-## ¿Cómo muchos hemos aprendido a usar R? (30-45)
-
-.center[
-<img src="img/throw_into_pool.gif" width=50%>
-]
-
-
-???
-
----
-
-## ¡Hora de aprender!
-
-.center[
-<img src="img/learning.gif" width=50%>
-]
-
-
-???
----
-
-## Diferenciando entre R y RStudio
-
-.pull-left[
-### R Studio
-Es uno de los más IDE más usados. Facilita al usuario para programar R y otros lenguajes.
-
-.center[
-
-<img src="img/dashboard.jpg" height=250px>
-]
-]
-
-.pull-right[
-
-### R
-Es el software estadístico por excelencia. ***La lingua franca*** en estadística.
-.center[
-
-<img src="img/engine.jpg" height=250px>
-
-]
-]
-
----
-
-## Práctica 1: Leer un archivo de Manos a la data
-
-
-
-1. Entra a la  [semana 1 de Manos a la Data](https://github.com/BESTDATASCIENCE/manos-a-la-data/blob/master/data/2020/2020-03-04/)
-2. Identificar el archivo csv de la [semana 1](https://github.com/BESTDATASCIENCE/manos-a-la-data/blob/master/data/2020/2020-03-04/municipalidades.csv)
-3. Instala el paquete tidyverse. Escribe install.packages("tidyverse"). ***Importante respetar las comillas y mayúsculas y minúsculas en general al instalar paquetes.***
-4. Crea un R Script usando la función *readr::read_csv()* (paquete readr, función read_csv)
-5. Utiliza el operador "<-" y ponle el nombre municipalidades.
-6. Utiliza la función View() para ver la data.
-
----
-
-## Práctica 1: Leer un archivo de Manos a la data (web)
-
-.center[
-
-<img src="img/GITHUB1.jpg" height=450px>
-
-]
-
----
-
-## Práctica 1: Leer un archivo de Manos a la data
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-install.packages("tidyverse") #esto solo se hace 1 vez
-library(tidyverse) # carga el paquete
-{{municipalidades <- readr::read_csv('https://raw.githubusercontent.com/BESTDATASCIENCE/manos-a-la-data/master/data/2020/2020-03-04/municipalidades.csv')}}
-
-View(municipalidades) # veamos cómo está cargada la data!
-```
-
-
----
-
-## Práctica 1: Leer un archivo de Manos a la data (descargado)
-
-.center[
-
-<img src="img/download.jpg" height=450px>
-
-]
----
-
-## Práctica 1: Leer un archivo de Manos a la data (descargado)
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-library(tidyverse) # carga el paquete
-# 
-setwd("~/clases best/semana 1/") # solo si has descargado el archivo
-{{municipalidades <- readr::read_csv("municipalidades.csv")}}
-
-View(municipalidades) # veamos cómo está cargada la data!
-```
-
----
-
-## Práctica 1: Leer un archivo de Manos a la data (descargado)
-
-Recuerda que tu directorio de trabajo (working directory), es donde vas a trabajar y guardar tus archivos. Puedes usar esta opción si estás iniciando en R.
-
-.center[
-
-<img src="img/setwd.jpg" height=450px>
-
-]
-
----
-
-## Conceptos: Paquetes
-
-.center[
-![](img/rpackages.png)
-]
-
----
-
-## Conceptos: Paquetes
-
->Packages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data.
-
-
-> **Hadley (2015). R packages**
-
-
----
-
-## Conceptos: Paquetes
-
->In R, the fundamental unit of shareable code is the package. A package bundles together code, data, documentation, and tests, and is easy to share with others. As of January 2015, there were over 6,000 packages available on the Comprehensive R Archive Network, or CRAN, the public clearing house for R packages. This huge variety of packages is one of the reasons that R is so successful: the chances are that someone has already solved a problem that you’re working on, and you can benefit from their work by downloading their package.
-
-> **Hadley (2015). R packages**
-
----
-
-## Conceptos: Paquetes (35-40)
-
-Hay paquetes para todo!
-
-* __Temas académicos:__ tesis, investigación reproducible, libros, papers, manejar bibliografías, etc.
-* __Producción:__ Desarrollo de aplicaciones, servidores, etc. 
-* __Ciencias:__ Economía, Psicología, Biología, Medicina, Finanzas, etc.
-* __Acceso a APIs:__ Banco Mundial, FMI, Bloomberg, etc.
-
----
-
-## Conceptos: Paquetes
-
->But packages are useful even if you never share your code. As Hilary Parker says in her introduction to packages: “Seriously, it doesn’t have to be about sharing your code (although that is an added benefit!). It is about saving yourself time.” Organising code in a package makes your life easier because packages come with conventions.
-
-> **Hadley (2015). R packages**
-
-
----
-class: inverse middle center
-
-## dplyr
-
-.animated.bounce[
-<img src="img/dplyr.jpg" height=280px>
-]
-
-
----
-
-## Programación funcional (40-55)
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-arrange( #ORDENA
-   summarize(#CREA UNA VARIABLE
-       group_by( # AGRUPA VARIABLES
-           filter(mtcars, carb > 1), #FILTRA
-           cyl
-          ),
-       Avg_mpg = mean(mpg)
-      ),
-   desc(Avg_mpg)
- )
-
-```
-
----
-
-## Programación basada en objetos
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-a <- filter(mtcars, carb > 1)#FILTRA
-b <- group_by(a, cyl)# AGRUPA VARIABLES
-c <- summarise(b, Avg_mpg = mean(mpg))#CREA UNA VARIABLE
-d <- arrange(c, desc(Avg_mpg))#ORDENA
-print(d)
-```
-
----
-
-## Programación con pipas
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-library(magrittr)
-library(dplyr)
-
-mtcars %>%
-        filter(carb > 1) %>%
-        group_by(cyl) %>%
-        summarise(Avg_mpg = mean(mpg)) %>%
-        arrange(desc(Avg_mpg))
-```
-
----
-
-## Una introducción a Dplyr
-
-* __filtrar:__ `filter()` Utiliza == , <, >, >=, <=, %in% c("elemento1","elemento2").
-* __agrupar por:__ `group_by()` Crea grupo para tener resúmenes de datos luego con summarise.
-* __crea nuevas variables resumidas:__ `summarise()` Crea resúmenes de un grupo. Ejm promedio de notas por salón de clase.
-* __creación de variables sin resumir:__ `mutate()` Crea una variable de cualquier tipo.
-* __Ordenar datos:__ `arrange()` y  `arrange(desc())`Ordena una base de datos de forma ascendente o descendente.
-* Hay muchas más funciones usa `?dplyr`
-
----
-
-## Práctica 2: Trabajar por primera vez en R (55-70)
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-
-library(tidyverse) # carga el paquete
-municipalidades <- readr::read_csv('https://raw.githubusercontent.com/BESTDATASCIENCE/manos-a-la-data/master/data/2020/2020-03-04/municipalidades.csv')
-names(municipalidades)
-municipalidades %>%
-  group_by(Municipalidad) %>%
-  summarise(avance=median(avance)) %>% # aqui puedes poner comentarios
-  arrange(avance) %>% # ordenar por avance por default de menor a mayor
-  View()
-municipalidades %>%
-  group_by(Municipalidad) %>%
-  summarise(avance=median(avance)) %>% # aqui puedes poner comentarios
-  arrange(desc(avance)) %>% # ordenar por avance por default de mayor a menor
-  View()
-
-```
-
----
-
-## Mardown vs Rmarkdown (70-75)
-
-* Pueden encontrar muchos detalles en  [la sección de referencias de la web del curso](https://taller-manos-a-la-data-v03.netlify.app/reference/markdown/) por lo que se les sugiere leerlos 
-* Markdown es un tipo especial de lenguaje de markup que permite formatear de forma sencilla el texto. Uno puede convertir el markdown usando por ejemplo un programa convertidor como pandoc en cualquier formato que uno quiere: HTML, PDF, Word, PowerPoint, etc.
-* R Markdown es regular Markdown con código de R y el resultado puede ser HTML, Word, PPT, etc. Tú puedes hacer todo lo que sabes de regular Markdown, así como añadir gráficos, tablas y otros resultados de R directamente en tu documento.
-
----
-
-## Práctica 3: Trabajar por primera vez en Rmarkdown (Parte I) (75-90)
-
-* Primero hay que crear un RMD.
-* modifiquemos el texto!
-
-
-.center[
-![](img/rmarkdown.jpg)
+<img src="img/Portada.jpg" width=25%>
 ]
 
 
 
 ---
 
-## Práctica 3: Trabajar por primera vez en Rmarkdown (Parte II) (75-90)
-
-* Pongamos el siguiente script!
-
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-municipalidades %>%
-  group_by(Municipalidad) %>%
-  summarise(avance=median(avance)) %>% # aqui puedes poner comentarios
-  arrange(avance) %>% # ordenar por avance por default de menor a mayor
-  DT::datatable()
-```
-
-
----
-
-## Práctica 3: Trabajar por primera vez en Rmarkdown (Parte III) (75-90)
-
-* Pongamos la siguiente configuración en el chunk!
-
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-#```{r, warning=FALSE,message=FALSE,echo=FALSE}
-```
-
----
-
-## Práctica 3: Trabajar por primera vez en Rmarkdown (Parte IV) (75-90)
-
-* Crea otro subtítulo usando ## o ### seguido del nombre (Ejm: Gráfico de tendencia).
-
-
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-municipalidades<-read.csv("https://raw.githubusercontent.com/BESTDATASCIENCE/manos-a-la-data/master/data/2020/2020-03-04/municipalidades.csv")
-
-
-municipalidades2 <- municipalidades %>%
-                      filter(PROVINCIA=="MUNICIPALIDAD METROPOLITANA DE LIMA")
-
-p5 <- ggplot(municipalidades2, aes(x = periodo, y = avance))
-(p5 <- p5 + geom_line() +
-      facet_wrap(~Municipalidad, ncol = 2)+
-
-      theme( axis.text = element_text( size = 14 ),
-             axis.text.x = element_text( size = 12 ),
-             axis.title = element_text( size = 14, face = "bold" ),
-             legend.position="none",
-             strip.text = element_text(size = 6))  +
-      labs(title = "Avance presupuestal", subtitle = "Histórico 2007-2019",caption = "Fuente: Consulta Amigable",
-           x="Periodo", y="Avance presupuestal (%)")+ stat_smooth(method=lm))
-
-```
-
----
-
-## Práctica 3: Trabajar por primera vez en Rmarkdown (Parte IV) (75-90)
-
-
-```{r, message=FALSE, warning=FALSE, echo=TRUE,eval=FALSE}
-p5 <- ggplot(municipalidades2, aes(x = periodo, y = avance))
-(p5 <- p5 + geom_line() +
-      facet_wrap(~Municipalidad, ncol = 2)+
-
-      theme( axis.text = element_text( size = 14 ),
-             axis.text.x = element_text( size = 12 ),
-             axis.title = element_text( size = 14, face = "bold" ),
-             legend.position="none",
-             strip.text = element_text(size = 6))  +
-      labs(title = "Avance presupuestal", subtitle = "Histórico 2007-2019",caption = "Fuente: Consulta Amigable",
-           x="Periodo", y="Avance presupuestal (%)")+ stat_smooth(method=lm))
-
-```
----
-
-## Git y Github (90-95)
-
-Es crítico para proyectos de mayor envergadura y para aprovechar manos a la data!
-
-
-.center[
-
-<img src="img/doggo_version_control.jpg" height=450px>
-
-]
-
----
-
-## Git y Github (90-95)
-
-Así evitamos los clásicos, final, final final, final final esta es, final final esta es 2, etc.
-.center[
-
-<img src="img/final_final.jpg" height=350px>
-
-]
-
----
-
-## Git y Github (90-95)
-
-* Git es un sistema de control de versiones.
-* Github es un servicio que usa Git. Hay otros como Gitlab por ejemplo.
-
-.center[
-
-<img src="img/git2.png" height=350px>
-
-]
-
----
-
-## Git y Github (90-95)
+## ¡Manos a la data!
 
 
 
 .center[
 
-<img src="img/git1.jpg" height=350px>
+<img src="img/owl1.png" height=450px>
 
 ]
 
 
 
----
-
-## Práctica 4: poner gráficos específicos (95-120)
-
-* Descarga el siguiente [ejemplo 1](https://1drv.ms/u/s!Ar8SfX--tjF7j8kfmLGZjw79ux2CrQ?e=qrAgfJ) y córrelo en RStudio!
-* Descarga el siguiente [ejemplo 2](https://1drv.ms/u/s!Ar8SfX--tjF7j8keg5kT-UOctFaRjA?e=zWUHxF) y córrelo en RStudio!
-
-
----
-
-## Tarea (95-120)
-
-* Crearse su cuenta de Github (25%).
-* Comentar qué bases de datos les gustaría tener en el futuro en Manos a la Data (25%) [Link](https://github.com/BESTDATASCIENCE/manos-a-la-data/issues)
-* ¡Graficar 3 distritos, poner el logo del distrito y calcular la media, mediana, máximo, mínimo, desviación estándar y ponerlo como texto! (50%)
-
-
----
-
-## ¿Consultas adicionales?
-
-* [Web del curso](https://taller-manos-a-la-data-v03.netlify.app/)
-* El whatsapp del grupo.
 
 
 
