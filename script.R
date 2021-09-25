@@ -1,7 +1,3 @@
-#install.packages("xlsx")
-#install.packages("openxlsx")
-library(openxlsx)
-library(xlsx)
 library(gt)
 library(htmltools)
 library(ggplot2)
@@ -19,7 +15,8 @@ library(readxl)
 library(plotly)
 library(xkcd)
 
-cor1<-read_excel("E:/GitHub/corrupcion_peru/corrupcion.xlsx")
+setwd("E:/GitHub/Example_02")
+cor1<-read_excel("corrupcion.xlsx")
 cor<-cor1[-c(11:14),]
 cor<-cor[,-c(8)]
 cor<-cor[,-c(1:2)]
